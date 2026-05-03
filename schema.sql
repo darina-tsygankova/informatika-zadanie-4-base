@@ -6,7 +6,7 @@ CREATE TABLE "Ученики" (
     "Фамилия" VARCHAR(40) NOT NULL,
     "Имя" VARCHAR(40) NOT NULL,
     "Класс" VARCHAR(4) NOT NULL,
-    "Дата_рождения" DATE NOT NULL
+    "Дата рождения" DATE NOT NULL
 );
 
 CREATE TABLE "Успеваемость" (

@@ -88,7 +88,7 @@ public class CreateDb {
     Connection c = DriverManager.getConnection("jdbc:hsqldb:file:" + args[0], "sa", "");
     Statement s = c.createStatement();
 
-    s.executeUpdate("CREATE TABLE \"Ученики\" (\"ID_ученика\" INTEGER NOT NULL PRIMARY KEY, \"Фамилия\" VARCHAR(40) NOT NULL, \"Имя\" VARCHAR(40) NOT NULL, \"Класс\" VARCHAR(4) NOT NULL, \"Дата_рождения\" DATE NOT NULL)");
+    s.executeUpdate("CREATE TABLE \"Ученики\" (\"ID_ученика\" INTEGER NOT NULL PRIMARY KEY, \"Фамилия\" VARCHAR(40) NOT NULL, \"Имя\" VARCHAR(40) NOT NULL, \"Класс\" VARCHAR(4) NOT NULL, \"Дата рождения\" DATE NOT NULL)");
     s.executeUpdate("CREATE TABLE \"Успеваемость\" (\"ID_Оценки\" INTEGER NOT NULL PRIMARY KEY, \"ID_ученика\" INTEGER NOT NULL, \"Четверть\" INTEGER NOT NULL, \"Оценка\" INTEGER NOT NULL, CONSTRAINT \"FK_Успеваемость_Ученики\" FOREIGN KEY (\"ID_ученика\") REFERENCES \"Ученики\"(\"ID_ученика\"))");
 
     String[][] pupils = {
@@ -173,7 +173,7 @@ def content_xml() -> str:
             <db:column db:name="Фамилия"/>
             <db:column db:name="Имя"/>
             <db:column db:name="Класс"/>
-            <db:column db:name="Дата_рождения"/>
+            <db:column db:name="Дата рождения"/>
           </db:columns>
         </db:table-representation>
         <db:table-representation db:name="Успеваемость">
